@@ -28,7 +28,8 @@ public class StepsLogin {
     @And("User is on login page")
     public void userIsOnLoginPage() {
         System.out.println("User is on Login page");
-        driver.get("https://www.saucedemo.com/v1/");}
+        driver.get("https://www.saucedemo.com/v1/");
+        System.out.println("Done");}
     @When("User enters {} and {}")
     public void userEntersAnd(String username, String password) {
         System.out.println("Finding driver");
@@ -37,7 +38,8 @@ public class StepsLogin {
         login.enterpassword(password);}
     @And("User click on login button")
     public void userClickOnLoginButton() {
-        login.clickLogin();}
+        login.clickLogin();
+        System.out.println("Login successful");}
     @Then("User is navigate to the homepage")
     public void userIsNavigateToTheHomepage() {
         home = new HomePage(driver);
